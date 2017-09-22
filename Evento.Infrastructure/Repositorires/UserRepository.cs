@@ -8,7 +8,7 @@ using Evento.Core.Repositories;
 
 namespace Evento.Infrastructure.Repositorires
 {
-    class UserRepository : IUserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly ISet<User> _users = new HashSet<User>();
 

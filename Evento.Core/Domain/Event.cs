@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Evento.Core.Domain
 {
-    //todo skonczone na 3.5
+    //todo skonczone na 3.6
     public class Event : Entity
     {
         private ISet<Ticket> _tickets = new HashSet<Ticket>();
