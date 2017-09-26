@@ -24,6 +24,15 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "http://localhost:50031/"
+    },
+    "Evento.Api.Staging": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "launchUrl": "events",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Staging"
+      },
+      "applicationUrl": "http://localhost:50031/"
     }
   }
 }
