@@ -57,7 +57,15 @@ namespace Evento.Infrastructure.Services
 
         public async Task AddTicketsAsync(Guid eventId, int amount, decimal price)
         {
-            throw new NotImplementedException();
+            var @event = await _eventRepository.GetAsync(eventId);
+
+            if (@event == null)
+            {
+                throw new Exception($"Event named: '{eventId}' dose not exist.");
+            }
+
+            @event.AddTickets(amount, price);
+            await _eventRepository.UpdateAsync(@event);
         }
 
         public async Task UpdatedAsync(Guid id, string name, string description)
